@@ -260,9 +260,9 @@ if __name__ == "__main__":
     COLLISION_MANUALS = []
 
     for arg in sys.argv[1:]:
-        if arg.startswith('EM') or arg.startswith('EWD'):
+        if arg.startswith('EM'):
             EWDS.append(arg)
-        elif arg.startswith('RM'):
+        elif arg.startswith('RM') or arg.startswith('EWD'):
             REPAIR_MANUALS.append(arg)
         elif arg.startswith('BM'):
             COLLISION_MANUALS.append(arg)
