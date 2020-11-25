@@ -258,14 +258,17 @@ if __name__ == "__main__":
     EWDS = []
     REPAIR_MANUALS = []
     COLLISION_MANUALS = []
+    EWD = []
 
     for arg in sys.argv[1:]:
         if arg.startswith('EM'):
             EWDS.append(arg)
-        elif arg.startswith('RM') or arg.startswith('EWD'):
+        elif arg.startswith('RM'):
             REPAIR_MANUALS.append(arg)
         elif arg.startswith('BM'):
             COLLISION_MANUALS.append(arg)
+        elif arg.startswith('EWD'):
+            EWD.append(arg)
         else:
             print("Unknown document type for '" + arg + "'!")
             sys.exit(1)
@@ -295,5 +298,9 @@ if __name__ == "__main__":
     print("Downloading repair manuals...")
     for rm in REPAIR_MANUALS:
         download_manual(driver, "rm", rm)
+    
+    print("Downloading EWD manual...")
+    for ewd in EWD:
+        download_manual(driver, "ewd", ewd)
 
     driver.close()
