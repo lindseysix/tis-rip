@@ -247,7 +247,7 @@ def download_manual(driver, t, id):
 
 def make_pdf(src, dest):
     print("Creating PDF from", src, "to", dest)
-    subprocess.run(["/usr/bin/chromium", "--print-to-pdf=" + dest, "--no-gpu", "--headless", "file://" + os.path.abspath(src)])
+    subprocess.run(["C:\Program Files\Google\Chrome\Application\chrome.exe", "--print-to-pdf=" + dest, "--no-gpu", "--headless", "file://" + os.path.abspath(src)])
 
 
 if __name__ == "__main__":
