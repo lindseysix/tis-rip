@@ -201,7 +201,7 @@ def download_manual(driver, t, id):
                     break
                 else:
                     print("Waiting for incomplete download!")
-                    time.sleep(0.2)
+                    time.sleep(5.0)
 
             # list out all downloads in folder and try to match them!
             dest_file = None
